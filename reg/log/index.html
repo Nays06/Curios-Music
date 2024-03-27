@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="navi" style="height: 28px">
+          <div style="margin-left: auto; margin-right: auto; height: 28px">
+            <h2 style="margin: 0; padding: 0">
+              <a href="../../index.html">Home</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="reg-icon">
+          <a href="index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+              fill="none"
+            >
+              <circle
+                cx="21"
+                cy="21"
+                r="20.75"
+                stroke="white"
+                stroke-width="0.5"
+              />
+              <g clip-path="url(#clip0_128_1909)">
+                <path
+                  d="M21.525 20.975C23.8204 20.975 25.6812 19.1142 25.6812 16.8188C25.6812 14.5233 23.8204 12.6625 21.525 12.6625C19.2295 12.6625 17.3687 14.5233 17.3687 16.8188C17.3687 19.1142 19.2295 20.975 21.525 20.975Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M25.6812 22.6375H25.9738C26.5815 22.6377 27.1683 22.8598 27.6238 23.262C28.0793 23.6643 28.3723 24.219 28.4476 24.822L28.7726 27.4189C28.8019 27.6528 28.781 27.8903 28.7114 28.1155C28.6419 28.3408 28.5252 28.5487 28.3692 28.7254C28.2131 28.9021 28.0213 29.0437 27.8063 29.1406C27.5914 29.2375 27.3584 29.2876 27.1226 29.2875H15.9273C15.6916 29.2876 15.4585 29.2375 15.2436 29.1406C15.0287 29.0437 14.8368 28.9021 14.6808 28.7254C14.5247 28.5487 14.408 28.3408 14.3385 28.1155C14.2689 27.8903 14.2481 27.6528 14.2773 27.4189L14.6015 24.822C14.6769 24.2187 14.9701 23.6638 15.4259 23.2615C15.8818 22.8592 16.469 22.6373 17.0769 22.6375H17.3687"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_128_1909">
+                  <rect
+                    width="19.95"
+                    height="19.95"
+                    fill="white"
+                    transform="translate(11.55 11)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="puti">
+        <div
+          style="
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          <div style="font-weight: 500; font-size: 20px">
+            Login / Register Account
+          </div>
+          <div class="putiput">
+            Home
+            <div
+              style="
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: #d0d0d0;
+              "
+            ></div>
+            Account
+            <div
+              style="
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color: #d0d0d0;
+              "
+            ></div>
+            Login / Register
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="gdedatalog">Введите данные, чтобы войти</div>
+      <div class="gdedatareg">Введите данные, чтобы зарегестрироваться</div>
+      <div class="dataerrlog">Логин или пароль неправильные</div>
+      <div class="main-container">
+        <div class="_anim-items login">
+          <div class="login-container">
+            <div class="login-title">Login</div>
+            <input
+              type="text"
+              class="inp"
+              maxlength="25"
+              placeholder="Email..."
+              id="login-login"
+            />
+            <input
+              type="password"
+              class="inp"
+              maxlength="15"
+              placeholder="Password..."
+              id="login-password"
+            />
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+              "
+            >
+              <label style="user-select: none">
+                <input type="checkbox" class="inpch" />
+                Remember me
+              </label>
+
+              <a href="#" style="text-decoration: underline"
+                >Forgot password?</a
+              >
+            </div>
+
+            <div class="login-but" onclick="login()">
+              <div class="login-but-txt">Login</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="_anim-items register">
+          <div class="register-title">Register (New Users)</div>
+          <div class="ryad">
+            <label>
+              First Name
+              <br />
+              <input
+                type="text"
+                class="inp2"
+                placeholder="First Name"
+                id="reg-FName"
+              />
+            </label>
+
+            <label>
+              Last Name
+              <br />
+              <input
+                type="text"
+                class="inp2"
+                placeholder="Last Name"
+                id="reg-LName"
+              />
+            </label>
+          </div>
+
+          <div class="ryad">
+            <label>
+              E-mail Address
+              <br />
+              <input
+                type="email"
+                class="inp2"
+                placeholder="Email"
+                id="reg-Email"
+              />
+            </label>
+
+            <label>
+              Phone Number
+              <br />
+              <input
+                type="tel"
+                class="inp2"
+                placeholder="Phone Number"
+                id="reg-tel"
+              />
+            </label>
+          </div>
+
+          <div class="ryad">
+            <label>
+              Display Name
+              <br />
+              <input
+                type="text"
+                class="inp2"
+                placeholder="Display Name"
+                id="reg-DName"
+              />
+            </label>
+
+            <label>
+              Password
+              <br />
+              <input
+                type="password"
+                class="inp2"
+                placeholder="Password"
+                id="reg-password"
+              />
+            </label>
+          </div>
+
+          <label style="user-select: none">
+            <input type="checkbox" checked style="margin-top: 20px" />
+            Add me to the marketing list
+          </label>
+
+          <div class="register-but" onclick="register()">
+            <div class="register-but-txt">Register</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer style="padding-top: 40px">
+      <div class="mail" style="margin-left: calc(50% - 205px)">
+        <div
+          class="mail-txt"
+          style="
+            margin-left: 33px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding-bottom: 15px;
+          "
+        >
+          Enter your email to subscribe to our newsletter
+        </div>
+        <div class="mail-inp">
+          <input
+            type="text"
+            placeholder="Your Email"
+            id="maill"
+            maxlength="22"
+          />
+          <div class="mail-but">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="20"
+              viewBox="0 0 22 20"
+              fill="none"
+            >
+              <path
+                d="M8.91199 10H2.99999L1.02299 2.13505C1.01033 2.08934 1.00262 2.0424 0.999989 1.99505C0.977989 1.27405 1.77199 0.774048 2.45999 1.10405L21 10L2.45999 18.896C1.77999 19.223 0.995989 18.737 0.999989 18.029C1.00201 17.9658 1.01313 17.9031 1.03299 17.843L2.49999 13"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="nothing" style="display: flex">
+          <svg
+            id="udali"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 20 20"
+            fill="white"
+            style="
+              position: relative;
+              bottom: 41px;
+              left: 25px;
+              pointer-events: none;
+            "
+          >
+            <path
+              d="M16.5 4.5C16.5 3.675 15.825 3 15 3H3C2.175 3 1.5 3.675 1.5 4.5V13.5C1.5 14.325 2.175 15 3 15H15C15.825 15 16.5 14.325 16.5 13.5V4.5ZM15 4.5L9 8.25L3 4.5H15ZM15 13.5H3V6L9 9.75L15 6V13.5Z"
+              fill="#D0D0D0"
+            />
+          </svg>
+
+          <div style="width: 25px; height: 25px"></div>
+        </div>
+      </div>
+
+      <div class="foota" style="display: flex; justify-content: space-between">
+        <div class="foota-card">
+          <div class="foota-card-title">CONNECT</div>
+          <div class="palo"></div>
+          <div>support@curios.com</div>
+          <div class="soc-seti">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+              fill="none"
+            >
+              <path
+                d="M18 11.375C20.1333 11.375 20.4 11.375 21.2667 11.4375C23.4667 11.5 24.4667 12.5 24.5333 14.5C24.6 15.3125 24.6 15.5 24.6 17.5C24.6 19.5 24.6 19.75 24.5333 20.5C24.4667 22.5 23.4 23.5 21.2667 23.5625C20.4 23.625 20.2 23.625 18 23.625C15.8667 23.625 15.6 23.625 14.8 23.5625C12.6 23.5 11.6 22.5 11.5333 20.5C11.4667 19.6875 11.4667 19.5 11.4667 17.5C11.4667 15.5 11.4667 15.25 11.5333 14.5C11.6 12.5 12.6667 11.5 14.8 11.4375C15.6 11.375 15.8667 11.375 18 11.375ZM18 10C15.8 10 15.5333 10 14.7333 10.0625C11.8 10.1875 10.2 11.6875 10.0667 14.4375C10 15.1875 10 15.4375 10 17.5C10 19.5625 10 19.8125 10.0667 20.5625C10.2 23.3125 11.8 24.8125 14.7333 24.9375C15.5333 25 15.8 25 18 25C20.2 25 20.4667 25 21.2667 24.9375C24.2 24.8125 25.8 23.3125 25.9333 20.5625C26 19.8125 26 19.5625 26 17.5C26 15.4375 26 15.1875 25.9333 14.4375C25.8 11.6875 24.2 10.1875 21.2667 10.0625C20.4667 10 20.2 10 18 10ZM18 13.625C15.7333 13.625 13.8667 15.375 13.8667 17.5C13.8667 19.625 15.7333 21.375 18 21.375C20.2667 21.375 22.1333 19.625 22.1333 17.5C22.1333 15.375 20.2667 13.625 18 13.625ZM18 20C16.5333 20 15.3333 18.875 15.3333 17.5C15.3333 16.125 16.5333 15 18 15C19.4667 15 20.6667 16.125 20.6667 17.5C20.6667 18.875 19.4667 20 18 20ZM22.2667 12.625C21.7333 12.625 21.3333 13 21.3333 13.5C21.3333 14 21.7333 14.375 22.2667 14.375C22.8 14.375 23.2 14 23.2 13.5C23.2 13 22.8 12.625 22.2667 12.625Z"
+                fill="white"
+              />
+              <circle
+                cx="17.5"
+                cy="17.5"
+                r="17.25"
+                stroke="#D0D0D0"
+                stroke-width="0.5"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+              fill="none"
+            >
+              <path
+                d="M14.6582 20.175L14.3742 24.0909C14.8002 24.0909 14.9422 23.9511 15.1553 23.7413L17.0725 21.9931L20.9781 24.7902C21.6882 25.2098 22.1853 25 22.3983 24.1609L24.9547 12.2732C25.1677 11.2243 24.5996 10.8048 23.8895 11.0845L8.76438 16.7486C7.77024 17.0982 7.77024 17.6576 8.62236 17.9374L12.4569 19.1261L21.4752 13.6019C21.9012 13.3222 22.2563 13.462 21.9722 13.7417L14.6582 20.175Z"
+                fill="white"
+              />
+              <circle
+                cx="17.5"
+                cy="17.5"
+                r="17.25"
+                stroke="#D0D0D0"
+                stroke-width="0.5"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+              fill="none"
+            >
+              <circle
+                cx="17.5"
+                cy="17.5"
+                r="17.25"
+                stroke="#D0D0D0"
+                stroke-width="0.5"
+              />
+              <path
+                d="M26.7471 12.497C26.1557 12.759 25.5203 12.9361 24.8523 13.0162C25.5415 12.6038 26.0572 11.9547 26.303 11.1901C25.6555 11.5747 24.9468 11.8454 24.2078 11.9905C23.7108 11.4599 23.0525 11.1081 22.3352 10.99C21.6178 10.8718 20.8815 10.9937 20.2405 11.3369C19.5996 11.68 19.0899 12.2252 18.7905 12.8877C18.4912 13.5503 18.4189 14.2931 18.585 15.0009C17.2729 14.935 15.9894 14.594 14.8177 14C13.646 13.4059 12.6122 12.5722 11.7836 11.5527C11.5003 12.0415 11.3373 12.6082 11.3373 13.2117C11.337 13.755 11.4708 14.2899 11.7268 14.7691C11.9829 15.2483 12.3532 15.6569 12.805 15.9586C12.281 15.9419 11.7686 15.8003 11.3104 15.5456V15.5881C11.3104 16.3501 11.5739 17.0886 12.0564 17.6784C12.5389 18.2682 13.2106 18.6729 13.9575 18.8238C13.4714 18.9553 12.9618 18.9747 12.4671 18.8805C12.6779 19.5361 13.0883 20.1094 13.6411 20.5202C14.1939 20.931 14.8612 21.1586 15.5498 21.1712C14.3809 22.0888 12.9374 22.5865 11.4514 22.5843C11.1881 22.5844 10.9251 22.569 10.6637 22.5383C12.1721 23.5081 13.928 24.0228 15.7212 24.0208C21.7916 24.0208 25.1102 18.9931 25.1102 14.6326C25.1102 14.4909 25.1066 14.3478 25.1003 14.2062C25.7458 13.7394 26.3029 13.1613 26.7457 12.4991L26.7471 12.497Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="foota-card">
+          <div class="foota-card-title">MOBILE APP</div>
+          <div class="palo"></div>
+          <div
+            class="mobile-app"
+            style="display: flex; justify-content: space-between"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="37"
+              height="37"
+              viewBox="0 0 37 37"
+              fill="none"
+            >
+              <path
+                d="M27.0057 19.3563C26.9912 16.8921 28.1077 15.0349 30.3624 13.6654C29.1014 11.8588 27.1936 10.8651 24.6787 10.6736C22.2976 10.4857 19.6924 12.0611 18.7385 12.0611C17.7304 12.0611 15.4251 10.7387 13.6112 10.7387C9.86787 10.7965 5.88965 13.7232 5.88965 19.6779C5.88965 21.4376 6.21123 23.2551 6.85439 25.1268C7.71436 27.591 10.8146 33.6288 14.0484 33.5312C15.7395 33.4915 16.9354 32.3316 19.1359 32.3316C21.2714 32.3316 22.3771 33.5312 24.2632 33.5312C27.526 33.4843 30.3299 27.9957 31.1465 25.5242C26.7708 23.461 27.0057 19.4828 27.0057 19.3563ZM23.2081 8.33584C25.04 6.16064 24.8738 4.18057 24.8196 3.46875C23.2009 3.5627 21.3292 4.5708 20.2633 5.81016C19.089 7.13984 18.3988 8.78389 18.547 10.6375C20.2958 10.7712 21.8929 9.87148 23.2081 8.33584Z"
+                fill="white"
+              />
+            </svg>
+
+            <div
+              style="
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+              "
+            >
+              <div style="font-weight: 300; font-size: 11px">
+                Download on the
+              </div>
+              <div style="font-weight: 400; font-size: 18px">App Store</div>
+            </div>
+          </div>
+
+          <div
+            class="mobile-app"
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="28"
+              viewBox="0 0 26 28"
+              fill="none"
+              style="position: relative; left: 6px; top: 3px"
+            >
+              <g clip-path="url(#clip0_101_503)">
+                <path
+                  d="M19.1763 18.2793C22.473 16.458 24.9722 15.0701 25.1876 14.9622C25.8767 14.5935 26.5883 13.6176 25.1876 12.8596C24.7353 12.6212 22.3004 11.2765 19.1763 9.54248L14.8455 13.9433L19.1763 18.2792V18.2793Z"
+                  fill="#FFD900"
+                />
+                <path
+                  d="M14.8455 13.9431L1.05565 27.9271C1.37933 27.9702 1.74476 27.8838 2.17558 27.6455C3.0801 27.1474 12.6688 21.8786 19.1763 18.2802L14.8455 13.9431Z"
+                  fill="#F43249"
+                />
+                <path
+                  d="M14.8455 13.9432L19.1763 9.56403C19.1763 9.56403 3.1455 0.761301 2.17558 0.241665C1.81016 0.023899 1.40066 -0.0407871 1.03422 0.023899L14.8455 13.9432Z"
+                  fill="#00EE76"
+                />
+                <path
+                  d="M14.8455 13.9432L1.03421 0.0239258C0.473687 0.15432 0 0.652597 0 1.67163V26.2794C0 27.2121 0.366539 27.8839 1.05564 27.9487L14.8455 13.9432Z"
+                  fill="#00D3FF"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_101_503">
+                  <rect width="26" height="28" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <div
+              style="
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+              "
+            >
+              <div style="font-weight: 300; font-size: 11px">
+                Download on the
+              </div>
+              <div style="font-weight: 400; font-size: 18px">Google Play</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foota-card">
+          <div class="foota-card-title">ABOUT</div>
+          <div class="palo"></div>
+          <div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 177px;
+                align-items: center;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              About this marketplace
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 210px;
+                align-items: center;
+                margin-top: 5px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              Frequently asked questions
+            </div>
+          </div>
+        </div>
+
+        <div class="foota-card">
+          <div class="foota-card-title">LEGALESE</div>
+          <div class="palo"></div>
+          <div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 57px;
+                align-items: center;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              Terms
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 68px;
+                align-items: center;
+                margin-top: 5px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              Privacy
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 150px;
+                align-items: center;
+                margin-top: 5px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              Returns & Refunds
+            </div>
+
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 114px;
+                align-items: center;
+                margin-top: 5px;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="9"
+                viewBox="0 0 5 9"
+                fill="none"
+              >
+                <path
+                  d="M5 4.5L0.5 8.39711L0.5 0.602886L5 4.5Z"
+                  fill="#D0D0D0"
+                />
+              </svg>
+
+              Taxes & Fees
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="tipoBD.js"></script>
+  </body>
+</html>
