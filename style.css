@@ -322,9 +322,28 @@ main{
     justify-content: center;
 }
 
+.ryad-navi-all{
+    padding-left: 10px;
+    padding-right: 10px;
+    background: linear-gradient(to left, #5D00FA, #D70BCA);
+    border-radius: 20px;
+}
+
 footer{
     background-color: #09010D;
     padding-bottom: 40px;
+}
+
+.mail{
+    margin-left: calc(50% - 205px)
+}
+
+.mail-txt{
+    margin-left: 33px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 15px;
 }
 
 .mail-inp input{
@@ -361,6 +380,13 @@ footer{
 
 .mail-inp{
     display: flex;
+}
+
+#udali{
+    position: relative;
+    bottom: 41px;
+    left: 25px;
+    pointer-events: none;
 }
 
 .none{
@@ -423,6 +449,16 @@ footer{
     color: white;
 }
 
+.putidivs{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .putiput{
     width: 111px;
     display: flex;
@@ -444,6 +480,13 @@ footer{
 
 .sort-left{
     width: 430px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sort-left-2{
+    width: 421.1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -538,7 +581,20 @@ nav._active{
     opacity: 0;
 }
 
+.ryad-big{
+    display: flex;
+    justify-content: space-between;
+    width: 20000px;
+    transition: all 1.5s ease 0s;
+    opacity: 0;
+}
+
 .ryad._active{
+    width: 100%;
+    opacity: 1;
+}
+
+.ryad-big._active{
     width: 100%;
     opacity: 1;
 }
@@ -550,7 +606,19 @@ nav._active{
     transition: all 1.5s ease 0s;
 }
 
+.features-txt-2{
+    width: 205px;
+    opacity: 0;
+    transform: translate(0, -120%);
+    transition: all 1.5s ease 0s;
+}
+
 .features-txt._active{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.features-txt-2._active{
     opacity: 1;
     transform: translate(0, 0);
 }
@@ -585,6 +653,10 @@ nav._active{
         margin-right: 3%;
     }
 
+    /* .header-main{
+        
+    } */
+
     .header-main-text{
         width: 90%;
         margin-left: auto;
@@ -614,6 +686,8 @@ nav._active{
         flex-direction: column;
         height: 1800px;
         align-items: center;
+        width: 2000px;
+        transition: all 0.7s ease 0s;
     }
 
     .features-txt{
@@ -624,8 +698,74 @@ nav._active{
         width: auto;
     }
 
-    .ryad-navi{
+    .ryad-navi._active{
         width: 100%;
         font-size: 13px;
+    }
+
+    .mail{
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mail-txt{
+        margin-left: 0;
+        font-size: 14px;
+        /* text-align: center; */
+    }
+
+    .mail-inp input{
+        width: 300px;
+    }
+
+    .mail-but{
+        position: absolute;
+        right: 17px;
+    }
+
+    #udali{
+        left: -105px;
+    }
+
+    .foota{
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .spisok{
+        width: 100px;
+    }
+
+    .sort-left{
+        width: 170px;
+    }
+
+    .sort-left-2{
+        width: 170px;
+    }
+    
+    .showing{
+        display: none;
+    }
+
+    .putidivs{
+        width: 90%;
+    }
+
+    .ryad-big{
+        flex-direction: column;
+        height: 1300px;
+    }
+
+    .big-card{
+        width: 300px;
+        height: 390px;
+    }
+
+    .big-card-photo{
+        width: 250px;
+        height: 200px;
     }
 }
