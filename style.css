@@ -76,6 +76,18 @@ h4{
     margin: 0;
 }
 
+.header-main-text-1{
+    font-weight: 600;
+    font-size: 46px;
+    text-align: center
+}
+
+.header-main-text-2{
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center
+}
+
 .header-main-but{
     color: white;
     width: 236px;
@@ -194,7 +206,15 @@ main{
 
 .features-txt{
     width: 257px;
+    font-weight: 600;
+    font-size: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
 
+.features-txt-2{
+    width: 257px;
     font-weight: 600;
     font-size: 36px;
     margin-left: auto;
@@ -545,4 +565,67 @@ nav._active{
 .ryad-navi._active{
     width: 350px;
     opacity: 1;
+}
+
+
+@media screen and (max-width: 500px) {
+    header{
+        height: 100vh;
+    }
+
+    .navi{
+        width: 240px;
+    }
+
+    .navi div{
+        font-size: 13px;
+    }
+
+    .reg-icon{
+        margin-right: 3%;
+    }
+
+    .header-main-text{
+        width: 90%;
+        margin-left: auto;
+        nav-right: auto;
+        height: 100px;
+    }
+
+    .header-main-text-1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .header-main-text-2{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .header-main-but{
+        margin-top: 40px;
+    }
+
+    .features-nfts{
+        width: 80%;
+    }
+
+    .ryad{
+        flex-direction: column;
+        height: 1800px;
+        align-items: center;
+    }
+
+    .features-txt{
+        margin-bottom: 20px;
+    }
+
+    .features-txt-2{
+        width: auto;
+    }
+
+    .ryad-navi{
+        width: 100%;
+        font-size: 13px;
+    }
 }
