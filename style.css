@@ -50,6 +50,7 @@ nav{
 
 .reg-icon{
     margin-right: 8%;
+    cursor: pointer;
 }
 
 .header-main{
@@ -625,7 +626,6 @@ nav._active{
 
 .ryad-navi{
     width: 700px;
-
     opacity: 0;
     transition: all 1s ease 0s;
 }

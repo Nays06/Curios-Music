@@ -1,24 +1,33 @@
-let user1 = {
-    login: "Login",
-    password: "Password"
-}
-
-let user2 = {
-    login: "Login2",
-    password: "Password2"
-}
-
-let user3 = {
-    login: "a",
-    password: "b"
-}
-
-
 bd = [
-    user1,
-    user2,
-    user3
+    {
+        id: 1,
+        login: "Login",
+        password: "Password"
+    },
+    {
+        id: 2,
+        login: "Login2",
+        password: "Password2"
+    },
+    {
+        id: 3,
+        login: "a",
+        password: "b"
+    }
 ]
+
+function provLog() {
+    let login = document.getElementById("login-login").value;
+    let password = document.getElementById("login-password").value;
+
+    for (let element of bd) {
+        if (login == element.login && password == element.password) {
+            return true;
+        }
+    }
+    return false;
+}
+
 
 function login(){
     let login = document.getElementById("login-login").value
@@ -26,9 +35,14 @@ function login(){
     let go = true
 
     bd.forEach(element => {
-        if(login == element.login && password == element.password){
-            
-            window.location.href = '../../index.html';
+        if(provLog()){
+
+            document.querySelector(".vseok").classList.add("_active")
+            go = false
+
+            setTimeout(() => {
+                document.querySelector(".vseok").classList.remove("_active")
+            }, 2000);
 
         } else if(login == "" || password == ""){
             document.querySelector(".gdedatalog").classList.add("_active")
@@ -48,28 +62,29 @@ function login(){
     });
 }
 
-function register(){
-    let fName = document.getElementById("reg-FName").value
-    let lName = document.getElementById("reg-LName").value
-    let email = document.getElementById("reg-Email").value
-    let tel = document.getElementById("reg-tel").value
-    let dName = document.getElementById("reg-DName").value
-    let password = document.getElementById("reg-password").value
 
-    bd.forEach(element => {
-        if(fName != "" && lName != "" && email != "" && tel != "" && dName != "" && password != ""){
+// function register(){
+//     let fName = document.getElementById("reg-FName").value
+//     let lName = document.getElementById("reg-LName").value
+//     let email = document.getElementById("reg-Email").value
+//     let tel = document.getElementById("reg-tel").value
+//     let dName = document.getElementById("reg-DName").value
+//     let password = document.getElementById("reg-password").value
+
+//     bd.forEach(element => {
+//         if(fName != "" && lName != "" && email != "" && tel != "" && dName != "" && password != ""){
             
-            window.location.href = '../../index.html';
+//             window.location.href = '../../index.html';
 
-        } else{
-            document.querySelector(".gdedatareg").classList.add("_active")
+//         } else{
+//             document.querySelector(".gdedatareg").classList.add("_active")
 
-            setTimeout(() => {
-                document.querySelector(".gdedatareg").classList.remove("_active")
-            }, 1500);
-        }
-    });
-}
+//             setTimeout(() => {
+//                 document.querySelector(".gdedatareg").classList.remove("_active")
+//             }, 1500);
+//         }
+//     });
+// }
 
 
 
