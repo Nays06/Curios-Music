@@ -165,7 +165,7 @@ main{
     .login-but-txt{
         background: linear-gradient(to right, #5D00FA, #D70BCA);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        background-clip: text;
     }
 }
 
@@ -223,12 +223,20 @@ main{
     .register-but-txt{
         background: linear-gradient(to right, #5D00FA, #D70BCA);
         -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+        background-clip: text;
     }
 }
 
 .inp2::placeholder{
     color: rgb(194, 188, 188);
+}
+
+.none{
+    display: none;
+}
+
+.nothing{
+    height: 32px;
 }
 
 .foota-card{
@@ -345,6 +353,29 @@ footer{
 }
 
 .vseok._active{
+    transform: translate(0);
+    opacity: 1;
+}
+
+.vsevseok{
+    background-color: rgb(29, 255, 22);
+    width: 420px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    border-radius: 20px;
+
+    transform: translate(120%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.vsevseok._active{
     transform: translate(0);
     opacity: 1;
 }

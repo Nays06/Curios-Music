@@ -14,7 +14,7 @@ document.querySelectorAll("#maill").forEach(inputElement => {
             let udaliElements = document.querySelectorAll("#udali");
             udaliElements.forEach(udaliElement => {
                 udaliElement.classList.add("none");
-                console.log("udalil");
+                // console.log("udalil");
             });
         }
 
@@ -22,13 +22,14 @@ document.querySelectorAll("#maill").forEach(inputElement => {
             let udaliElements = document.querySelectorAll("#udali");
             udaliElements.forEach(udaliElement => {
                 udaliElement.classList.remove("none");
-                console.log(454645);
+                // console.log(454645);
             });
         }
     });
 });
 
   function discover() {
+    document.title = "Discover"
     document.querySelector(".home").classList.add("none");
     document.querySelector(".marketplace").classList.add("none");
     document.querySelector(".discover").classList.remove("none");
@@ -41,6 +42,7 @@ document.querySelectorAll("#maill").forEach(inputElement => {
     }
   }
   function home() {
+    document.title = "Home"
     document.querySelector(".discover").classList.add("none");
     document.querySelector(".marketplace").classList.add("none");
     document.querySelector(".home").classList.remove("none");
@@ -50,6 +52,7 @@ document.querySelectorAll("#maill").forEach(inputElement => {
     }
   }
   function marketplace() {
+    document.title = "Marketplace"
     document.querySelector(".discover").classList.add("none");
     document.querySelector(".home").classList.add("none");
     document.querySelector(".marketplace").classList.remove("none");
@@ -92,9 +95,10 @@ if(animItems.length > 0){
 
             if((pageYOffset > animItemOffset -  animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
                 animItem.classList.add("_active");
-            } else{
-                animItem.classList.remove("_active");
-            }
+            } 
+            // else{
+            //     animItem.classList.remove("_active");
+            // }
         }
     }
     function offset(el){
@@ -148,7 +152,6 @@ function provLog() {
 function login(){
     let login = document.getElementById("login-login").value
     let password = document.getElementById("login-password").value
-    let go = true
 
     bd.forEach(element => {
         if(provLog()){
@@ -187,16 +190,28 @@ function register(){
 
     bd.forEach(element => {
         if(fName != "" && lName != "" && email != "" && tel != "" && dName != "" && password != ""){
+            localStorage.setItem("user_name", fName)
+            localStorage.setItem("user_surname", lName)
             localStorage.setItem("userLog", email)
             localStorage.setItem("userPas", password)
             
+            // window.location.href = '../../index.html';
 
-            // bd.push({
-            //     id: 4,
-            //     login: localStorage.getItem("userLog", email),
-            //     password: localStorage.getItem("userPas", password)
-            // })
-            window.location.href = '../../index.html';
+            const date = new Date();
+            function getMonthName(monthNumber) {
+                date.setMonth(monthNumber);
+                const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
+                return month;
+            }
+            localStorage.setItem("user_join_date", `Joined ${date.getDate()} ${getMonthName(date.getMonth())}, ${date.getFullYear()}`)
+
+
+            document.querySelector(".vsevseok").classList.add("_active")
+
+            setTimeout(() => {
+                document.querySelector(".vsevseok").classList.remove("_active")
+                location.reload ()
+            }, 1500);
 
         } else{
             document.querySelector(".gdedatareg").classList.add("_active")
@@ -208,11 +223,24 @@ function register(){
     });
 }
 
-document.querySelector(".reg-icon").addEventListener("click", function(){
-    if(localStorage.getItem("isLogined") == "true"){
-        window.location = "logined/index.html"
-    } else{
-        window.location = "reg/log/index.html"
-        console.log(1111111111);
-    }
-})
+// document.getElementsByClassName("reg-icon").addEventListener("click", function(){
+//     console.log(99999999999);
+//     if(localStorage.getItem("isLogined") == "true"){
+//         // window.location = "logined/index.html"
+//     } else{
+//         // window.location = "reg/log/index.html"
+//         // console.log(1111111111);
+//     }
+// })
+
+let reg_icons = document.querySelectorAll(".reg-icon")
+
+for(reg_icon of reg_icons){
+    reg_icon.addEventListener("click", function(){
+        if(localStorage.getItem("isLogined") == "true"){
+            window.location = "logined/index.html"
+        } else{
+            window.location = "reg/log/index.html"
+        }
+    })
+}
